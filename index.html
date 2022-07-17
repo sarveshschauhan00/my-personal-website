@@ -2,13 +2,14 @@
 <html lang="en">
 
 <head>
+
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>College Predictor - free college predictor</title>
     <meta name="author" content="Derek Eder">
     <meta content="Display any CSV file as a searchable, filterable, pretty HTML table">
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+
 
     <title>CollegePredictor - Free College Predictor</title>
     <!-- Favicon-->
@@ -188,7 +189,7 @@
                             <input id="inputAdvancedCatagoryRank" class="form-control" type="number"
                                    placeholder="Enter your Advanced Catagory Rank (optional)">
                             <br/>
-                            <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+                            <button type="submit" class="btn btn-primary">Submit</button>
                         </form>
                     </div>
                 </div>
@@ -199,22 +200,22 @@
     <hr>
     <br/>
     <section id="iit_college">
-        <h3 class="text-center alert-dark">I.I.T. Colleges</h3>
+        <h3 class="text-center alert-dark text-decoration-underline">I.I.T. Colleges</h3>
         <div class="row" id="table-container4" style="overflow-x: scroll"></div>
     </section>
     <br/>
     <section id="nit_college">
-        <h3 class="text-center alert-dark">N.I.T. Colleges</h3>
+        <h3 class="text-center alert-dark text-decoration-underline">N.I.T. Colleges</h3>
         <div class="row" id="table-container1" style="overflow-x: scroll"></div>
     </section>
     <br/>
     <section id="iiit_college">
-        <h3 class="text-center alert-dark">I.I.I.T. Colleges</h3>
+        <h3 class="text-center alert-dark text-decoration-underline">I.I.I.T. Colleges</h3>
         <div class="row" id="table-container2" style="overflow-x: scroll"></div>
     </section>
     <br/>
     <section id="govt_college">
-        <h3 class="text-center alert-dark">Govt. Funded Colleges</h3>
+        <h3 class="text-center alert-dark text-decoration-underline">Govt. Funded Colleges</h3>
         <div class="row" id="table-container3" style="overflow-x: scroll"></div>
     </section>
 
@@ -281,6 +282,8 @@
     </div>
 </footer>
 
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.bundle.min.js"></script>
@@ -295,10 +298,6 @@
             return "<a href='" + link + "' target='_blank'>" + link + "</a>";
         else return "";
     }
-
-function myFunction() {
-  document.getElementById("submit").click();
-}
 
 </script>
 </body>
