@@ -188,7 +188,7 @@
                             <input id="inputAdvancedCatagoryRank" class="form-control" type="number"
                                    placeholder="Enter your Advanced Catagory Rank (optional)">
                             <br/>
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="submit" class="btn btn-primary" id="submit">Submit</button>
                         </form>
                     </div>
                 </div>
@@ -197,20 +197,24 @@
     </section>
 
     <hr>
+    <br/>
     <section id="iit_college">
-        <h1 align="center">I.I.T.</h1>
+        <h3 class="text-center alert-dark">I.I.T. Colleges</h3>
         <div class="row" id="table-container4" style="overflow-x: scroll"></div>
     </section>
+    <br/>
     <section id="nit_college">
-        <h1 align="center">N.I.T.</h1>
+        <h3 class="text-center alert-dark">N.I.T. Colleges</h3>
         <div class="row" id="table-container1" style="overflow-x: scroll"></div>
     </section>
+    <br/>
     <section id="iiit_college">
-        <h1 align="center">I.I.I.T.</h1>
+        <h3 class="text-center alert-dark">I.I.I.T. Colleges</h3>
         <div class="row" id="table-container2" style="overflow-x: scroll"></div>
     </section>
+    <br/>
     <section id="govt_college">
-        <h1 align="center">Govt. Funded Colleges</h1>
+        <h3 class="text-center alert-dark">Govt. Funded Colleges</h3>
         <div class="row" id="table-container3" style="overflow-x: scroll"></div>
     </section>
 
@@ -292,21 +296,9 @@
         else return "";
     }
 
-    // CsvToHtmlTable.init({
-    //         gender: 'inputGenderSelect',
-    //         catagory: 'inputCatagorySelect',
-    //         percentile: 'inputPercentile',
-    //         mains_cat_rank: 'inputMainsCatagoryRank',
-    //         adv_gen_rank: 'inputAdvancedGeneralRank',
-    //         adv_cat_rank: 'inputAdvancedCatagoryRank',
-    //         csv_path: 'data/nit_list.csv',
-    //         element: 'table-container',
-    //         allow_download: true,
-    //         datatables_options: {
-    //             paging: false
-    //         },
-    //     })
-
+function myFunction() {
+  document.getElementById("submit").click();
+}
 
 </script>
 </body>
