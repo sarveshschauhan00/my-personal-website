@@ -12,7 +12,8 @@ CsvToHtmlTable = {
         var adv_cat_rank = document.getElementById(options.adv_cat_rank).value
 
         var rank = parseInt((1 - parseFloat(percentile) / 100) * 769589)
-
+        var low_margin = 0.9
+        var high_margin = 1.1
         if (catagory == "OPEN" && mains_cat_rank > 0) {
             rank = mains_cat_rank
         }
@@ -53,7 +54,7 @@ CsvToHtmlTable = {
                     if ((0 < percentile && percentile < 100) || mains_cat_rank > 0) {
                         for (var rowIdx = 1; rowIdx < Math.floor(csvData.length); rowIdx++) {
                             if (csvData[rowIdx][3] == catagory && csvData[rowIdx][3] != "OPEN") {
-                                if (mains_cat_rank >= (0.98) * parseInt(csvData[rowIdx][5]) && mains_cat_rank <= (1.02) * parseInt(csvData[rowIdx][6])) {
+                                if (mains_cat_rank >= (low_margin) * parseInt(csvData[rowIdx][5]) && mains_cat_rank <= (high_margin) * parseInt(csvData[rowIdx][6])) {
                                     if (gender == csvData[rowIdx][4] || csvData[rowIdx][4] == "Gender-Neutral") {
                                         var $tableBodyRow = $("<tr></tr>");
                                         for (var colIdx = 0; colIdx < csvData[rowIdx].length; colIdx++) {
@@ -71,7 +72,7 @@ CsvToHtmlTable = {
                                 }
                             }
                             if (csvData[rowIdx][3] == "OPEN") {
-                                if (rank >= (0.98) * parseInt(csvData[rowIdx][5]) && rank <= (1.02) * parseInt(csvData[rowIdx][6])) {
+                                if (rank >= (low_margin) * parseInt(csvData[rowIdx][5]) && rank <= (high_margin) * parseInt(csvData[rowIdx][6])) {
                                     if (gender == csvData[rowIdx][4] || csvData[rowIdx][4] == "Gender-Neutral") {
                                         var $tableBodyRow = $("<tr></tr>");
                                         for (var colIdx = 0; colIdx < csvData[rowIdx].length; colIdx++) {
@@ -96,7 +97,7 @@ CsvToHtmlTable = {
                     if (adv_gen_rank>0 || adv_cat_rank>0) {
                         for (var rowIdx = 1; rowIdx < Math.floor(csvData.length); rowIdx++) {
                             if (csvData[rowIdx][3] == catagory && csvData[rowIdx][3] != "OPEN") {
-                                if (adv_cat_rank >= (0.98) * parseInt(csvData[rowIdx][5]) && adv_cat_rank <= (1.02) * parseInt(csvData[rowIdx][6])) {
+                                if (adv_cat_rank >= (low_margin) * parseInt(csvData[rowIdx][5]) && adv_cat_rank <= (high_margin) * parseInt(csvData[rowIdx][6])) {
                                     if (gender == csvData[rowIdx][4] || csvData[rowIdx][4] == "Gender-Neutral") {
                                         var $tableBodyRow = $("<tr></tr>");
                                         for (var colIdx = 0; colIdx < csvData[rowIdx].length; colIdx++) {
@@ -114,7 +115,7 @@ CsvToHtmlTable = {
                                 }
                             }
                             if (csvData[rowIdx][3] == "OPEN") {
-                                if (adv_gen_rank >= (0.98) * parseInt(csvData[rowIdx][5]) && adv_gen_rank <= (1.02) * parseInt(csvData[rowIdx][6])) {
+                                if (adv_gen_rank >= (low_margin) * parseInt(csvData[rowIdx][5]) && adv_gen_rank <= (high_margin) * parseInt(csvData[rowIdx][6])) {
                                     if (gender == csvData[rowIdx][4] || csvData[rowIdx][4] == "Gender-Neutral") {
                                         var $tableBodyRow = $("<tr></tr>");
                                         for (var colIdx = 0; colIdx < csvData[rowIdx].length; colIdx++) {
